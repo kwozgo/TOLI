@@ -56,15 +56,39 @@
 		0318941C281C824D00A170CA /* TOLI */ = {
 			isa = PBXGroup;
 			children = (
-				0318941D281C824D00A170CA /* AppDelegate.swift */,
-				0318941F281C824D00A170CA /* SceneDelegate.swift */,
-				03189421281C824D00A170CA /* ViewController.swift */,
+				03189431281C83B700A170CA /* Modules */,
+				03189433281C83C900A170CA /* Settings */,
+				03189432281C83C000A170CA /* Resources */,
 				03189423281C824D00A170CA /* Main.storyboard */,
-				03189426281C824E00A170CA /* Assets.xcassets */,
 				03189428281C824E00A170CA /* LaunchScreen.storyboard */,
 				0318942B281C824E00A170CA /* Info.plist */,
 			);
 			path = TOLI;
+			sourceTree = "<group>";
+		};
+		03189431281C83B700A170CA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				03189421281C824D00A170CA /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		03189432281C83C000A170CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03189426281C824E00A170CA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		03189433281C83C900A170CA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0318941D281C824D00A170CA /* AppDelegate.swift */,
+				0318941F281C824D00A170CA /* SceneDelegate.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
