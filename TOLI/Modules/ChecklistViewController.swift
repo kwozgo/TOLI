@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  ChecklistViewController.swift
 //  TOLI
 //
-//  Created by Evolution on 4/29/22.
+//  Created by Charlie Walton on 4/29/22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
