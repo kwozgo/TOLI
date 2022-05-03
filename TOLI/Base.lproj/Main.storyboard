@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="usN-ei-VMJ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="YiL-5x-Gdl">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YiL-5x-Gdl" id="cud-Kt-yc3">
-                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-ZG-Kvb">
-                                            <rect key="frame" x="20" y="0.0" width="318.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-ZG-Kvb">
+                                            <rect key="frame" x="20" y="10" width="318.5" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -32,8 +32,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="9hv-ZG-Kvb" firstAttribute="leading" secondItem="cud-Kt-yc3" secondAttribute="leading" constant="20" id="Fwp-UK-EqV"/>
-                                        <constraint firstItem="9hv-ZG-Kvb" firstAttribute="top" secondItem="cud-Kt-yc3" secondAttribute="top" id="WHp-mS-DRW"/>
-                                        <constraint firstAttribute="bottom" secondItem="9hv-ZG-Kvb" secondAttribute="bottom" id="nhA-eh-GUl"/>
+                                        <constraint firstItem="9hv-ZG-Kvb" firstAttribute="top" secondItem="cud-Kt-yc3" secondAttribute="top" constant="10" id="WHp-mS-DRW"/>
+                                        <constraint firstAttribute="bottom" secondItem="9hv-ZG-Kvb" secondAttribute="bottom" constant="10" id="nhA-eh-GUl"/>
                                         <constraint firstAttribute="trailing" secondItem="9hv-ZG-Kvb" secondAttribute="trailing" id="vsS-lG-g99"/>
                                     </constraints>
                                 </tableViewCellContentView>
