@@ -51,6 +51,14 @@ extension ChecklistViewController {
 
 extension ChecklistViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = self.tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .none {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+        }
+        
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }
