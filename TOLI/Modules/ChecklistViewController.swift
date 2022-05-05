@@ -53,7 +53,10 @@ extension ChecklistViewController {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: Default.checklistCellId, for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(
+            withIdentifier: Default.checklistCellId,
+            for: indexPath
+        )
         
         let item = self.items[indexPath.row]
         
