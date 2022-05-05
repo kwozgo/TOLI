@@ -38,6 +38,19 @@ final class ChecklistViewController: UITableViewController {
         item5.text = "Eat ice cream"
         self.items.append(item5)
     }
+    
+    @IBAction private func addItem() {
+        let newRowIndex = self.items.count
+        
+        let item = ChecklistItem()
+        item.text = "I'm a new row"
+        self.items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        
+        self.tableView.insertRows(at: indexPaths, with: .automatic)
+    }
 }
 
 // MARK: - Table View Data Source
@@ -84,6 +97,17 @@ extension ChecklistViewController {
         let item = self.items[indexPath.row]
         item.checked.toggle()
         self.configureCheckmark(for: cell, with: item)
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
+        self.items.remove(at: indexPath.row)
+        
+        let indexPaths = [indexPath]
+        self.tableView.deleteRows(at: indexPaths, with: .automatic)
     }
 }
 
