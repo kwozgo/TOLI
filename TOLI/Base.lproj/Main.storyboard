@@ -44,7 +44,9 @@
                             <outlet property="delegate" destination="usN-ei-VMJ" id="BUr-MO-CNx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="Vms-Ri-oUP"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="Vms-Ri-oUP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OOt-M0-6p6"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlD-hb-VSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
