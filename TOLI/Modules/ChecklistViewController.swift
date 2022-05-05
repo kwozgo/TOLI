@@ -29,7 +29,13 @@ final class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Init text of row items
+        self.row0item.text = "Walk the dog"
+        self.row1item.text = "Brush my teeth"
+        self.row2item.text = "Learn iOS development"
+        self.row3item.text = "Soccer practice"
+        self.row4item.text = "Eat ice cream"
     }
 }
 
