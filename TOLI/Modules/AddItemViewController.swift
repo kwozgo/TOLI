@@ -19,6 +19,11 @@ class AddItemViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.textField.becomeFirstResponder()
+    }
+    
     @IBAction private func done() {
         print("Contents of the text field: \(self.textField.text!)")
         self.navigationController?.popViewController(animated: true)
