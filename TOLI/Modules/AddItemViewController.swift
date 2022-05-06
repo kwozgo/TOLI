@@ -7,10 +7,22 @@
 
 import UIKit
 
+protocol AddItemViewControllerDelegate: AnyObject {
+    func addItemViewControllerDidCancel(
+        _ controller: AddItemViewController
+    )
+    func addItemViewController(
+        _ controller: AddItemViewController,
+        didFinishAdding item: ChecklistItem
+    )
+}
+
 class AddItemViewController: UITableViewController {
 
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var doneBarButton: UIBarButtonItem!
+    
+    weak var delegate: AddItemViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +39,16 @@ class AddItemViewController: UITableViewController {
     
     @IBAction private func done() {
         print("Contents of the text field: \(self.textField.text!)")
-        self.navigationController?.popViewController(animated: true)
+        let item = ChecklistItem()
+        item.text = self.textField.text!
+        self.delegate?.addItemViewController(
+            self,
+            didFinishAdding: item
+        )
     }
     
     @IBAction private func cancel() {
-        self.navigationController?.popViewController(animated: true)
+        self.delegate?.addItemViewControllerDidCancel(self)
     }
     
 
@@ -87,4 +104,5 @@ extension AddItemViewController: UITextFieldDelegate {
 }
 
 /// You can compare files with FileMerge - Xcode > Open Developer Tool > FileMerge
+/// loose coupling - when object B is independent of object A
 

@@ -51,6 +51,16 @@ final class ChecklistViewController: UITableViewController {
         
         self.tableView.insertRows(at: indexPaths, with: .automatic)
     }
+    
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
+    ) {
+        if segue.identifier == "AddItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+        }
+    }
 }
 
 // MARK: - Table View Data Source
@@ -131,4 +141,28 @@ private extension ChecklistViewController {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
+}
+
+extension ChecklistViewController: AddItemViewControllerDelegate {
+    func addItemViewControllerDidCancel(
+        _ controller: AddItemViewController
+    ) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func addItemViewController(
+        _ controller: AddItemViewController, 
+        didFinishAdding item: ChecklistItem
+    ) {
+        let newRowIndex = self.items.count
+        self.items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        
+        self.tableView.insertRows(at: indexPaths, with: .automatic)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 }
