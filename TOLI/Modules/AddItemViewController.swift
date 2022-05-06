@@ -74,11 +74,14 @@ extension AddItemViewController: UITextFieldDelegate {
             in: stringRange,
             with: string
         )
-        if newText.isEmpty {
-            self.doneBarButton.isEnabled = false
-        } else {
-            self.doneBarButton.isEnabled = true
-        }
+        
+        self.doneBarButton.isEnabled = !newText.isEmpty
+        
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        self.doneBarButton.isEnabled = false
         return true
     }
 }
