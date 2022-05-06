@@ -85,3 +85,6 @@ extension AddItemViewController: UITextFieldDelegate {
         return true
     }
 }
+
+/// You can compare files with FileMerge - Xcode > Open Developer Tool > FileMerge
+
