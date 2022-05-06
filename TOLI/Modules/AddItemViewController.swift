@@ -9,6 +9,8 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
 
+    @IBOutlet private weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +20,7 @@ class AddItemViewController: UITableViewController {
     }
     
     @IBAction private func done() {
+        print("Contents of the text field: \(self.textField.text!)")
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -43,7 +46,7 @@ class AddItemViewController: UITableViewController {
 extension AddItemViewController {
     
     override func tableView(
-        _ tableView: UITableView, 
+        _ tableView: UITableView,
         willSelectRowAt indexPath: IndexPath
     ) -> IndexPath? {
         nil
