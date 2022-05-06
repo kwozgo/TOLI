@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="YiL-5x-Gdl">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="41"/>
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YiL-5x-Gdl" id="cud-Kt-yc3">
-                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="41"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-ZG-Kvb">
-                                            <rect key="frame" x="20" y="10" width="318.5" height="21"/>
+                                            <rect key="frame" x="20" y="10" width="318.5" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -80,6 +80,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="4mJ-AZ-cc8" eventType="editingDidEndOnExit" id="H2O-Jh-pK2"/>
+                                                        <outlet property="delegate" destination="4mJ-AZ-cc8" id="dRY-7l-FK3"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -112,6 +113,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="shT-HF-Wvd" id="w1O-d2-Flh"/>
                         <outlet property="textField" destination="MSz-lr-ZMo" id="PI2-Mb-pll"/>
                     </connections>
                 </tableViewController>
